@@ -23,7 +23,28 @@ body {
     position: fixed; }
   .navbar__link-wrap {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
+    @media (max-width: 980px) {
+      .navbar__link-wrap {
+        width: 100%;
+        justify-content: center; } }
+  .navbar__mobile-menu {
+    position: absolute;
+    left: 20px; }
+  .navbar__phone-email {
+    position: absolute;
+    display: flex;
+    right: 20px; }
+    .navbar__phone-email:hover {
+      cursor: pointer; }
+    .navbar__phone-email__separator {
+      margin-left: 5px;
+      margin-right: 5px;
+      width: 2px;
+      height: 25px;
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: rotate(12deg); }
   .navbar__contact-link {
     height: 60px;
     width: 206px;
@@ -37,6 +58,9 @@ body {
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 1.5px; }
+    @media (max-width: 980px) {
+      .navbar__contact-link {
+        display: none; } }
   .navbar__link {
     margin-left: 60px;
     font-family: "Montserrat", sans-serif;
@@ -47,11 +71,45 @@ body {
     text-transform: uppercase;
     color: #7e7f82;
     transition: .2s ease; }
+    @media (max-width: 980px) {
+      .navbar__link {
+        display: none; } }
     .navbar__link:hover {
       color: #FFFFFF; }
   .navbar .logo {
     height: 20px;
     padding-left: 20px; }
+    @media (max-width: 980px) {
+      .navbar .logo {
+        padding-left: 0px; } }
+
+.mobile_navigation {
+  width: 100%;
+  height: 0px;
+  position: fixed;
+  top: 60px;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  z-index: 100;
+  transition: .4s ease;
+  overflow: hidden;
+  background: linear-gradient(#2A292D 25%, #555457); }
+  .mobile_navigation a {
+    text-decoration: none; }
+  .mobile_navigation.show {
+    height: calc(100% - 44px);
+    max-height: 656px; }
+  .mobile_navigation__link {
+    height: 82px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    font-family: "Montserrat", sans-serif;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px; }
 
 .hotel_technologies {
   max-width: 980px;
@@ -96,7 +154,8 @@ body {
   @media (max-width: 980px) {
     .pagination-title {
       height: 16px;
-      font-size: 8px; } }
+      font-size: 8px;
+      font-weight: 500; } }
 
 .products {
   display: flex;

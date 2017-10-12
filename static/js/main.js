@@ -51,32 +51,46 @@ document.addEventListener("DOMContentLoaded", function() {
     "products__filter__options"
   );
 
-
   initializeMenu();
   function initializeMenu() {
-
-    document.querySelectorAll('[data-icon=brand-hide]')[0].classList.add("d-none");
-    document.querySelectorAll('[data-icon=category-hide]')[0].classList.add("d-none");
+    document
+      .querySelectorAll("[data-icon=brand-hide]")[0]
+      .classList.add("d-none");
+    document
+      .querySelectorAll("[data-icon=category-hide]")[0]
+      .classList.add("d-none");
 
     for (let i = 0; i < mobileFilterHeader.length; i++) {
-
       const dataMenu = mobileFilterHeader[i].getAttribute("data-menu");
       const option = document.querySelectorAll(`[data-option=${dataMenu}]`);
-      const filterContainer = document.getElementsByClassName("products__filter__container")[0];
+      const filterContainer = document.getElementsByClassName(
+        "products__filter__container"
+      )[0];
 
       if (window.innerWidth >= 981) {
         option[0].style.maxHeight = option[0].scrollHeight + "px";
 
-        document.querySelectorAll('[data-icon=brand-hide]')[0].classList.add("d-none");
-        document.querySelectorAll('[data-icon=category-hide]')[0].classList.add("d-none");
-        document.querySelectorAll('[data-icon=brand-show]')[0].classList.add("d-none");
-        document.querySelectorAll('[data-icon=category-show]')[0].classList.add("d-none");
+        document
+          .querySelectorAll("[data-icon=brand-hide]")[0]
+          .classList.add("d-none");
+        document
+          .querySelectorAll("[data-icon=category-hide]")[0]
+          .classList.add("d-none");
+        document
+          .querySelectorAll("[data-icon=brand-show]")[0]
+          .classList.add("d-none");
+        document
+          .querySelectorAll("[data-icon=category-show]")[0]
+          .classList.add("d-none");
         filterContainer.style.maxHeight = 800 + "px";
-
       } else {
         option[0].style.maxHeight = null;
-        document.querySelectorAll('[data-icon=brand-show]')[0].classList.remove("d-none");
-        document.querySelectorAll('[data-icon=category-show]')[0].classList.remove("d-none");
+        document
+          .querySelectorAll("[data-icon=brand-show]")[0]
+          .classList.remove("d-none");
+        document
+          .querySelectorAll("[data-icon=category-show]")[0]
+          .classList.remove("d-none");
 
         filterContainer.style.maxHeight = null;
       }
@@ -85,51 +99,56 @@ document.addEventListener("DOMContentLoaded", function() {
 
   window.addEventListener("resize", initializeMenu);
 
-
   // Handle filter menu clicking..
   for (let i = 0; i < mobileFilterHeader.length; i++) {
     mobileFilterHeader[i].onclick = function() {
       const dataMenu = this.getAttribute("data-menu");
       const option = document.querySelectorAll(`[data-option=${dataMenu}]`);
 
-      if ( window.innerWidth <= 980 ) {
+      if (window.innerWidth <= 980) {
         if (option[0].style.maxHeight) {
           option[0].style.maxHeight = null;
-          document.querySelectorAll(`[data-icon=${dataMenu}-show]`)[0].classList.remove("d-none");
-          document.querySelectorAll(`[data-icon=${dataMenu}-hide]`)[0].classList.add("d-none");
+          document
+            .querySelectorAll(`[data-icon=${dataMenu}-show]`)[0]
+            .classList.remove("d-none");
+          document
+            .querySelectorAll(`[data-icon=${dataMenu}-hide]`)[0]
+            .classList.add("d-none");
         } else {
           option[0].style.maxHeight = option[0].scrollHeight + "px";
-          document.querySelectorAll(`[data-icon=${dataMenu}-show]`)[0].classList.add("d-none");
-          document.querySelectorAll(`[data-icon=${dataMenu}-hide]`)[0].classList.remove("d-none");
+          document
+            .querySelectorAll(`[data-icon=${dataMenu}-show]`)[0]
+            .classList.add("d-none");
+          document
+            .querySelectorAll(`[data-icon=${dataMenu}-hide]`)[0]
+            .classList.remove("d-none");
         }
       }
-
-
     };
   }
 
+  document.getElementsByClassName(
+    "products__filter__mobile-close"
+  )[0].onclick = function() {
+    initializeMenu();
+  };
 
-  document.getElementsByClassName("products__filter__mobile-close")[0].onclick = function() {
-
-    initializeMenu()
-
-  }
-
-
-  document.getElementsByClassName("products__filter__mobile-header")[0].onclick = function() {
-
-    const filterContainer = document.getElementsByClassName("products__filter__container")[0];
-    if ( filterContainer.style.maxHeight ) {
+  document.getElementsByClassName(
+    "products__filter__mobile-header"
+  )[0].onclick = function() {
+    const filterContainer = document.getElementsByClassName(
+      "products__filter__container"
+    )[0];
+    if (filterContainer.style.maxHeight) {
       filterContainer.style.maxHeight = null;
     } else {
       filterContainer.style.maxHeight = 800 + "px";
     }
+  };
 
-
+  document.getElementById("js_mobile_menu").onclick = function() {
+    document.getElementsByClassName("mobile_navigation")[0].classList.toggle("show");
   }
-
-
-
 
 
 });
