@@ -38,6 +38,9 @@ body {
     right: 20px; }
     .navbar__phone-email:hover {
       cursor: pointer; }
+    @media (min-width: 981px) {
+      .navbar__phone-email {
+        display: none; } }
     .navbar__phone-email__separator {
       margin-left: 5px;
       margin-right: 5px;
