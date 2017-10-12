@@ -26,63 +26,90 @@
       </div>
 
       <div class="products">
+
+
         <div class="products__filters ">
 
+          <div class="products__filter__mobile-header">
+            Filter
+          </div>
+
+          <div class="products__filter__container">
+
           <div class="products__filter">
-              <div class="products__filter__header">Brand</div>
-              <div class="products__filter__option">
-                <input type="radio" id="radio01" name="radio" />
-                <label for="radio01"><span><div></div></span>All</label>
-              </div>
-              <div class="products__filter__option">
-                <input type="radio" id="radio02" name="radio" />
-                <label for="radio02"><span><div></div></span>iHome</label>
-              </div>
-              <div class="products__filter__option">
-                <input type="radio" id="radio03" name="radio" />
-                <label for="radio03"><span><div></div></span>Timex</label>
+              <div class="products__filter__header" data-menu="brand">
+                <img data-for="brand" data-icon="brand-show" class="products__filter__icon" src="/static/img/plus.svg" />
+                <img data-for="brand" data-icon="brand-hide" class="products__filter__icon d-none" src="/static/img/minus.svg" />
+                Brand</div>
+              <div class="products__filter__options" data-option="brand" >
+                <div class="products__filter__option">
+                  <input type="radio" id="radio01" name="radio" />
+                  <label for="radio01"><span><div></div></span>All</label>
+                </div>
+                <div class="products__filter__option">
+                  <input type="radio" id="radio02" name="radio" />
+                  <label for="radio02"><span><div></div></span>iHome</label>
+                </div>
+                <div class="products__filter__option">
+                  <input type="radio" id="radio03" name="radio" />
+                  <label for="radio03"><span><div></div></span>Timex</label>
+                </div>
               </div>
           </div>
 
           <div class="products__filter">
-              <div class="products__filter__header">Category</div>
-              <div class="products__filter__option">
-                <input type="checkbox" id="check01" name="radio" />
-                <label for="check01"><span><img src="/static/img/check.svg"/></span>Plugs</label>
-              </div>
-              <div class="products__filter__option">
-                <input type="checkbox" id="check02" name="radio" />
-                <label for="check02"><span><img src="/static/img/check.svg"/></span>Lighting</label>
-              </div>
-              <div class="products__filter__option">
-                <input type="checkbox" id="check03" name="radio" />
-                <label for="check03"><span><img src="/static/img/check.svg"/></span>Bluetooth</label>
-              </div>
-              <div class="products__filter__option">
-                <input type="checkbox" id="check04" name="radio" />
-                <label for="check04"><span><img src="/static/img/check.svg"/></span>Alarm Clock</label>
-              </div>
-              <div class="products__filter__option">
-                <input type="checkbox" id="check05" name="radio" />
-                <label for="check05"><span><img src="/static/img/check.svg"/></span>Triple Sided</label>
-              </div>
-              <div class="products__filter__option">
-                <input type="checkbox" id="check06" name="radio" />
-                <label for="check06"><span><img src="/static/img/check.svg"/></span>Outlets</label>
-              </div>
-              <div class="products__filter__option">
-                <input type="checkbox" id="check07" name="radio" />
-                <label for="check07"><span><img src="/static/img/check.svg"/></span>USB Charging</label>
-              </div>
-              <div class="products__filter__option">
-                <input type="checkbox" id="check08" name="radio" />
-                <label for="check08"><span><img src="/static/img/check.svg"/></span>Nightstand</label>
-              </div>
-              <div class="products__filter__option">
-                <input type="checkbox" id="check09" name="radio" />
-                <label for="check09"><span><img src="/static/img/check.svg"/></span>Desktop</label>
-              </div>
+              <div class="products__filter__header" data-menu="category">
+                <img data-for="category" data-icon="category-show" class="products__filter__icon" src="/static/img/plus.svg" />
+                <img data-for="category" data-icon="category-hide" class="products__filter__icon d-none" src="/static/img/minus.svg" />
+                Category</div>
+              <div class="products__filter__options" data-option="category">
+                <div class="products__filter__option">
+                  <input type="checkbox" id="check01" name="radio" />
+                  <label for="check01"><span><img src="/static/img/check.svg"/></span>Plugs</label>
+                </div>
+                <div class="products__filter__option">
+                  <input type="checkbox" id="check02" name="radio" />
+                  <label for="check02"><span><img src="/static/img/check.svg"/></span>Lighting</label>
+                </div>
+                <div class="products__filter__option">
+                  <input type="checkbox" id="check03" name="radio" />
+                  <label for="check03"><span><img src="/static/img/check.svg"/></span>Bluetooth</label>
+                </div>
+                <div class="products__filter__option">
+                  <input type="checkbox" id="check04" name="radio" />
+                  <label for="check04"><span><img src="/static/img/check.svg"/></span>Alarm Clock</label>
+                </div>
+                <div class="products__filter__option">
+                  <input type="checkbox" id="check05" name="radio" />
+                  <label for="check05"><span><img src="/static/img/check.svg"/></span>Triple Sided</label>
+                </div>
+                <div class="products__filter__option">
+                  <input type="checkbox" id="check06" name="radio" />
+                  <label for="check06"><span><img src="/static/img/check.svg"/></span>Outlets</label>
+                </div>
+                <div class="products__filter__option">
+                  <input type="checkbox" id="check07" name="radio" />
+                  <label for="check07"><span><img src="/static/img/check.svg"/></span>USB Charging</label>
+                </div>
+                <div class="products__filter__option">
+                  <input type="checkbox" id="check08" name="radio" />
+                  <label for="check08"><span><img src="/static/img/check.svg"/></span>Nightstand</label>
+                </div>
+                <div class="products__filter__option">
+                  <input type="checkbox" id="check09" name="radio" />
+                  <label for="check09"><span><img src="/static/img/check.svg"/></span>Desktop</label>
+                </div>
+            </div>
+
           </div>
+
+          <div class="products__filter__mobile-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8">
+              <path fill="#2A292D" fill-rule="evenodd" d="M137.5,314 L137.5,311 L135.5,311 L135.5,314 L132.5,314 L132.5,316 L135.5,316 L135.5,319 L137.5,319 L137.5,316 L140.5,316 L140.5,314 L137.5,314 Z" transform="rotate(45 445.41 -1.045)"/>
+            </svg> Close
+          </div>
+
+        </div>
 
         </div> <!-- End Product Filters -->
 
@@ -95,6 +122,11 @@
               <div class="products__product-detail products__product-detail--no-border-m">
                   <div class="products__product-title">Hi10</div>
                   <div class="products__product-description">Dual Charging Power Plug with Dual USB Charging and Nightlight</div>
+                  <a href="#" class="products__product-arrow-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+                      <path fill="#dfdfe0" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
+                    </svg>
+                  </a>
               </div>
             </div>
             <div class="products__product">
@@ -103,6 +135,11 @@
               <div class="products__product-detail">
                   <div class="products__product-title">Hi10</div>
                   <div class="products__product-description">Dual Charging Power Plug with Dual USB Charging and Nightlight</div>
+                  <a href="#" class="products__product-arrow-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+                      <path fill="#dfdfe0" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
+                    </svg>
+                  </a>
               </div>
             </div>
           </div>
@@ -114,6 +151,11 @@
               <div class="products__product-detail">
                   <div class="products__product-title">Hi10</div>
                   <div class="products__product-description">Dual Charging Power Plug with Dual USB Charging and Nightlight</div>
+                  <a href="#" class="products__product-arrow-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+                      <path fill="#dfdfe0" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
+                    </svg>
+                  </a>
               </div>
             </div>
             <div class="products__product">
@@ -122,6 +164,11 @@
               <div class="products__product-detail">
                   <div class="products__product-title">Hi10</div>
                   <div class="products__product-description">Dual Charging Power Plug with Dual USB Charging and Nightlight</div>
+                  <a href="#" class="products__product-arrow-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+                      <path fill="#dfdfe0" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
+                    </svg>
+                  </a>
               </div>
             </div>
           </div>
@@ -142,6 +189,11 @@
           <svg class="first" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
             <path fill="#2A292D" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
           </svg>
+          <svg class="quote-block__mobile-arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+            <path fill="#274ecc" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
+          </svg>
+
+
         </div>
       </div>
       <div class="quote-block__seperator"></div>
