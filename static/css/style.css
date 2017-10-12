@@ -16,7 +16,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2a292d; }
+  position: fixed;
+  background-color: #2a292d;
+  z-index: 3; }
   .navbar--sticky {
     position: fixed; }
   .navbar__link-wrap {
@@ -55,10 +57,10 @@ body {
   max-width: 980px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 60px; }
+  padding-top: 120px; }
   @media (max-width: 980px) {
     .hotel_technologies {
-      padding-top: 24px;
+      padding-top: 68px;
       max-width: 600px;
       width: 100%; } }
 
