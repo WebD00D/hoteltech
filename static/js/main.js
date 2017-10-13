@@ -2,25 +2,28 @@ document.addEventListener("DOMContentLoaded", function() {
   const quoteBlockButton = document.getElementsByClassName(
     "quote-block__button"
   )[0];
-  quoteBlockButton.onmouseover = function() {
-    const firstArrow = document.getElementsByClassName("first")[0];
-    const lastArrow = document.getElementsByClassName("last")[0];
 
-    if (window.innerWidth >= 980) {
-      firstArrow.classList.add("first--active");
-      lastArrow.classList.add("last--hidden");
-    }
-  };
+  if (quoteBlockButton) {
+    quoteBlockButton.onmouseover = function() {
+      const firstArrow = document.getElementsByClassName("first")[0];
+      const lastArrow = document.getElementsByClassName("last")[0];
 
-  quoteBlockButton.onmouseout = function() {
-    const firstArrow = document.getElementsByClassName("first")[0];
-    const lastArrow = document.getElementsByClassName("last")[0];
+      if (window.innerWidth >= 980) {
+        firstArrow.classList.add("first--active");
+        lastArrow.classList.add("last--hidden");
+      }
+    };
 
-    if (window.innerWidth >= 980) {
-      firstArrow.classList.remove("first--active");
-      lastArrow.classList.remove("last--hidden");
-    }
-  };
+    quoteBlockButton.onmouseout = function() {
+      const firstArrow = document.getElementsByClassName("first")[0];
+      const lastArrow = document.getElementsByClassName("last")[0];
+
+      if (window.innerWidth >= 980) {
+        firstArrow.classList.remove("first--active");
+        lastArrow.classList.remove("last--hidden");
+      }
+    };
+  }
 
   document.addEventListener("mousewheel", handleScroll);
   document.addEventListener("DOMMouseScroll", handleScroll);
@@ -51,7 +54,10 @@ document.addEventListener("DOMContentLoaded", function() {
     "products__filter__options"
   );
 
-  initializeMenu();
+  if (document.querySelectorAll("[data-icon=brand-hide]")[0]) {
+    initializeMenu();
+  }
+
   function initializeMenu() {
     document
       .querySelectorAll("[data-icon=brand-hide]")[0]
@@ -127,28 +133,32 @@ document.addEventListener("DOMContentLoaded", function() {
     };
   }
 
-  document.getElementsByClassName(
-    "products__filter__mobile-close"
-  )[0].onclick = function() {
-    initializeMenu();
-  };
-
-  document.getElementsByClassName(
-    "products__filter__mobile-header"
-  )[0].onclick = function() {
-    const filterContainer = document.getElementsByClassName(
-      "products__filter__container"
-    )[0];
-    if (filterContainer.style.maxHeight) {
-      filterContainer.style.maxHeight = null;
-    } else {
-      filterContainer.style.maxHeight = 800 + "px";
-    }
-  };
-
-  document.getElementById("js_mobile_menu").onclick = function() {
-    document.getElementsByClassName("mobile_navigation")[0].classList.toggle("show");
+  if (document.getElementsByClassName("products__filter__mobile-close")[0]) {
+    document.getElementsByClassName(
+      "products__filter__mobile-close"
+    )[0].onclick = function() {
+      initializeMenu();
+    };
   }
 
+  if (document.getElementsByClassName("products__filter__mobile-header")[0]) {
+    document.getElementsByClassName(
+      "products__filter__mobile-header"
+    )[0].onclick = function() {
+      const filterContainer = document.getElementsByClassName(
+        "products__filter__container"
+      )[0];
+      if (filterContainer.style.maxHeight) {
+        filterContainer.style.maxHeight = null;
+      } else {
+        filterContainer.style.maxHeight = 800 + "px";
+      }
+    };
+  }
 
+  document.getElementById("js_mobile_menu").onclick = function() {
+    document
+      .getElementsByClassName("mobile_navigation")[0]
+      .classList.toggle("show");
+  };
 });

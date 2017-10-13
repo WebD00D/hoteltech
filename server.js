@@ -26,6 +26,10 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 })
 
+app.get('/contact', function (req, res) {
+  res.sendFile(__dirname + '/contact.html');
+})
+
 
 app.listen(process.env.PORT || 8083, function () {
   console.log('Listening on port 8083!')
