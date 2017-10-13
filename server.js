@@ -26,6 +26,18 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 })
 
+app.get('/about', function (req, res) {
+  res.sendFile(__dirname + '/about.html');
+})
+
+app.get('/products', function (req, res) {
+  res.sendFile(__dirname + '/products.html');
+})
+
+app.get('/product-detail', function (req, res) {
+  res.sendFile(__dirname + '/product-detail.html');
+})
+
 app.get('/contact', function (req, res) {
   res.sendFile(__dirname + '/contact.html');
 })
