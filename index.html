@@ -17,9 +17,9 @@
           <div class="navbar__phone-email__separator"></div>
           <img src="/static/img/email_mobileNav.svg" />
         </div>
-        <img class="logo" src="/static/img/logo.png" />
-        <a class="navbar__link" href="#">About</a>
-        <a class="navbar__link" href="#">Products</a>
+        <a href="/"><img class="logo" src="/static/img/logo.png" /></a>
+        <a class="navbar__link" href="/about">About</a>
+        <a class="navbar__link" href="/products">Products</a>
       </div>
       <a class="navbar__contact-link" href="/contact">Contact Us</a>
     </div>
@@ -30,187 +30,171 @@
       <a href="/contact"><div class="mobile_navigation__link">Contact Us</div></a>
     </div>
 
-    <div class="hotel_technologies">
+    <div class="homepage">
 
-      <div class="page-header">
-        <div class="page-title">Products</div>
-        <div class="pagination-title">Showing 15 of 15 Products</div>
+      <div class="hero">
+        <div class="headline-wrapper">
+          <div class="headline">The Science of <br /> Feeling at Home</div>
+          <a class="button" href="/products">Products <img src="/static/img/arrow.svg" /></a>
+        </div>
       </div>
 
-      <div class="products">
+      <div class="info-brick">
+        <div class="content-wrap">
+          <div class="headline">The Lowdown</div>
+          <div class="copy">Hotel Technologies offers a wide variety of innovative products to the hospitality trade, including alarm clocks, clock radios, and speaker systems under the Timex and iHome brands.</div>
+          <a class="button" href="/products">Products <img src="/static/img/arrow.svg" /></a>
+        </div>
+      </div>
 
-
-        <div class="products__filters ">
-
-          <div class="products__filter__mobile-header">
-            Filter
+      <div class="features">
+        <div class="content-wrap">
+          <div class="headline">
+              Unique Features
           </div>
-
-          <div class="products__filter__container">
-
-          <div class="products__filter">
-              <div class="products__filter__header" data-menu="brand">
-                <img data-for="brand" data-icon="brand-show" class="products__filter__icon" src="/static/img/plus.svg" />
-                <img data-for="brand" data-icon="brand-hide" class="products__filter__icon d-none" src="/static/img/minus.svg" />
-                Brand</div>
-              <div class="products__filter__options" data-option="brand" >
-                <div class="products__filter__option">
-                  <input type="radio" id="radio01" name="radio" />
-                  <label for="radio01"><span><div></div></span>All</label>
-                </div>
-                <div class="products__filter__option">
-                  <input type="radio" id="radio02" name="radio" />
-                  <label for="radio02"><span><div></div></span>iHome</label>
-                </div>
-                <div class="products__filter__option">
-                  <input type="radio" id="radio03" name="radio" />
-                  <label for="radio03"><span><div></div></span>Timex</label>
-                </div>
-              </div>
-          </div>
-
-          <div class="products__filter">
-              <div class="products__filter__header" data-menu="category">
-                <img data-for="category" data-icon="category-show" class="products__filter__icon" src="/static/img/plus.svg" />
-                <img data-for="category" data-icon="category-hide" class="products__filter__icon d-none" src="/static/img/minus.svg" />
-                Category</div>
-              <div class="products__filter__options" data-option="category">
-                <div class="products__filter__option">
-                  <input type="checkbox" id="check01" name="radio" />
-                  <label for="check01"><span><img src="/static/img/check.svg"/></span>Plugs</label>
-                </div>
-                <div class="products__filter__option">
-                  <input type="checkbox" id="check02" name="radio" />
-                  <label for="check02"><span><img src="/static/img/check.svg"/></span>Lighting</label>
-                </div>
-                <div class="products__filter__option">
-                  <input type="checkbox" id="check03" name="radio" />
-                  <label for="check03"><span><img src="/static/img/check.svg"/></span>Bluetooth</label>
-                </div>
-                <div class="products__filter__option">
-                  <input type="checkbox" id="check04" name="radio" />
-                  <label for="check04"><span><img src="/static/img/check.svg"/></span>Alarm Clock</label>
-                </div>
-                <div class="products__filter__option">
-                  <input type="checkbox" id="check05" name="radio" />
-                  <label for="check05"><span><img src="/static/img/check.svg"/></span>Triple Sided</label>
-                </div>
-                <div class="products__filter__option">
-                  <input type="checkbox" id="check06" name="radio" />
-                  <label for="check06"><span><img src="/static/img/check.svg"/></span>Outlets</label>
-                </div>
-                <div class="products__filter__option">
-                  <input type="checkbox" id="check07" name="radio" />
-                  <label for="check07"><span><img src="/static/img/check.svg"/></span>USB Charging</label>
-                </div>
-                <div class="products__filter__option">
-                  <input type="checkbox" id="check08" name="radio" />
-                  <label for="check08"><span><img src="/static/img/check.svg"/></span>Nightstand</label>
-                </div>
-                <div class="products__filter__option">
-                  <input type="checkbox" id="check09" name="radio" />
-                  <label for="check09"><span><img src="/static/img/check.svg"/></span>Desktop</label>
-                </div>
+          <div class="feature-row">
+            <div class="feature">
+              <img class="feature-icon" src="/static/img/singleDayAlarm_large.svg" />
+              <div class="feature-title">Single-Day Alarm</div>
             </div>
-
+            <div class="feature">
+              <img class="feature-icon" src="/static/img/bluetooth_large.svg" />
+              <div class="feature-title">Bluetooth</div>
+            </div>
+            <div class="feature">
+              <img class="feature-icon" src="/static/img/nfc_large.svg" />
+              <div class="feature-title">NFC Compatible</div>
+            </div>
+            <div class="feature">
+              <img class="feature-icon" src="/static/img/speakerPhone_large.svg" />
+              <div class="feature-title">Speaker Phone</div>
+            </div>
           </div>
-
-          <div class="products__filter__mobile-close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8">
-              <path fill="#2A292D" fill-rule="evenodd" d="M137.5,314 L137.5,311 L135.5,311 L135.5,314 L132.5,314 L132.5,316 L135.5,316 L135.5,319 L137.5,319 L137.5,316 L140.5,316 L140.5,314 L137.5,314 Z" transform="rotate(45 445.41 -1.045)"/>
-            </svg> Close
+          <div class="feature-row">
+            <div class="feature">
+              <img class="feature-icon" src="/static/img/tripleDisplay_large.svg" />
+              <div class="feature-title">Patented Triple Display</div>
+            </div>
+            <div class="feature">
+              <img class="feature-icon" src="/static/img/wirelessCharging_large.svg" />
+              <div class="feature-title">Wireless Charging</div>
+            </div>
+            <div class="feature">
+              <img class="feature-icon" src="/static/img/outlets_large.svg" />
+              <div class="feature-title">Courtesy AC Outlet</div>
+            </div>
+            <div class="feature">
+              <img class="feature-icon" src="/static/img/usb_large.svg" />
+              <div class="feature-title">USB Charging</div>
+            </div>
           </div>
 
         </div>
-
-        </div> <!-- End Product Filters -->
-
-        <div class="products__grid">
-
-          <div class="products__row">
-            <div class="products__product">
-              <div class="products__new-tag"><span>NEW</span></div>
-              <div class="products__product-image" style="background-image:url('/static/img/Hi10_square.png')"></div>
-              <div class="products__product-detail products__product-detail--no-border-m">
-                  <div class="products__product-title">Hi10</div>
-                  <div class="products__product-description">Dual Charging Power Plug with Dual USB Charging and Nightlight</div>
-                  <a href="#" class="products__product-arrow-mobile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
-                      <path fill="#dfdfe0" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
-                    </svg>
-                  </a>
-              </div>
-            </div>
-            <div class="products__product">
-              <!-- <div class="products__new-tag"><span>NEW</span></div> -->
-              <div class="products__product-image" style="background-image:url('/static/img/Hi10_square.png')"></div>
-              <div class="products__product-detail">
-                  <div class="products__product-title">Hi10</div>
-                  <div class="products__product-description">Dual Charging Power Plug with Dual USB Charging and Nightlight</div>
-                  <a href="#" class="products__product-arrow-mobile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
-                      <path fill="#dfdfe0" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
-                    </svg>
-                  </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="products__row">
-            <div class="products__product">
-              <div class="products__new-tag"><span>NEW</span></div>
-              <div class="products__product-image" style="background-image:url('/static/img/Hi10_square.png')"></div>
-              <div class="products__product-detail">
-                  <div class="products__product-title">Hi10</div>
-                  <div class="products__product-description">Dual Charging Power Plug with Dual USB Charging and Nightlight</div>
-                  <a href="#" class="products__product-arrow-mobile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
-                      <path fill="#dfdfe0" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
-                    </svg>
-                  </a>
-              </div>
-            </div>
-            <div class="products__product">
-              <!-- <div class="products__new-tag"><span>NEW</span></div> -->
-              <div class="products__product-image" style="background-image:url('/static/img/Hi10_square.png')"></div>
-              <div class="products__product-detail">
-                  <div class="products__product-title">Hi10</div>
-                  <div class="products__product-description">Dual Charging Power Plug with Dual USB Charging and Nightlight</div>
-                  <a href="#" class="products__product-arrow-mobile">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
-                      <path fill="#dfdfe0" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
-                    </svg>
-                  </a>
-              </div>
-            </div>
-          </div>
-
-        </div> <!-- End Product Grid -->
       </div>
 
-    </div> <!-- end hotel_technologies page container -->
+      <div class="featured-products">
+          <div class="feature-products__row">
+            <div class="feature-products__block feature-products__block--one">
+              <div class="feature-products__block-title">HWL83</div>
+            </div>
+            <div class="feature-products__block feature-products__block--two">
+              <div class="feature-products__block-title">H1305</div>
+            </div>
+          </div>
+          <div class="feature-products__row">
+            <div class="feature-products__block feature-products__block--three">
+              <div class="feature-products__block-title">H1305</div>
+            </div>
+            <div class="feature-products__block feature-products__block--four">
+              <div class="feature-products__block__content">
+                  <div class="feature-products__block__title">
+                    A Product For <br /> Every Need
+                  </div>
+                  <div class="feature-products__block__copy">
+                    User-friendly products contribute to the enjoyment of your guests’
+                    stay, making a hotel room feel a little more like home.
+                  </div>
+                  <div class="feature-products__block__cta">
+                    <a href="/products">All Products <img src="/static/img/arrow_white.svg" /></a>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
 
-    <div class="quote-block">
-      <div class="quote-block__subheadline">Hotel Technologies</div>
-      <div class="quote-block__headline-wrap">
-        <div class="quote-block__headline">Request a Quote</div>
-        <div class="quote-block__button">
-          <svg class="last" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
-            <path fill="#2A292D" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
-          </svg>
-          <svg class="first" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
-            <path fill="#2A292D" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
-          </svg>
-          <svg class="quote-block__mobile-arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
-            <path fill="#274ecc" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
-          </svg>
-
-
+      <div class="clients">
+        <div class="headline-wrap">
+          <div class="headline">Our Clients</div>
+          <div class="subheader">Hotel Technologies has sold its products to virtually every <br /> major hotel chain around the world.</div>
+        </div>
+        <div class="content-wrap">
+          <div class="client-row">
+            <div class="client"><img src="/static/img/hotels/bellagio.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/bestWestern.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/delta.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/disney.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/druryInn.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/fairmont.svg" /></div>
+          </div>
+          <div class="client-row">
+            <div class="client"><img src="/static/img/hotels/fourSeasons.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/foxwoods.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/hilton.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/hotelIndigo.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/hyatt.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/hyattPlace.svg" /></div>
+          </div>
+          <div class="client-row">
+            <div class="client"><img src="/static/img/hotels/intercontinental.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/kimpton.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/loews.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/mandalayBay.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/marriott.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/mgmGrand.svg" /></div>
+          </div>
+          <div class="client-row">
+            <div class="client"><img src="/static/img/hotels/mirage.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/moheganSun.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/omniHotels.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/palazzo.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/ritzCarlton.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/sheraton.svg" /></div>
+          </div>
+          <div class="client-row">
+            <div class="client"><img src="/static/img/hotels/sofitel.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/stRegis.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/tropicana.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/waldorfAstoria.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/westin.svg" /></div>
+            <div class="client"><img src="/static/img/hotels/wynn.svg" /></div>
+          </div>
         </div>
       </div>
-      <div class="quote-block__seperator"></div>
-      <div class="quote-block__copyright">Copyright &copy; <span id="theYear">2017</span> Hotel Technologies</div>
+
+      <div class="quote-block">
+        <div class="quote-block__subheadline quote-block__subheadline--no-margin">Hotel Technologies</div>
+        <div class="quote-block__secondary">Quotes? Questions? Comments?</div>
+        <div class="quote-block__headline-wrap">
+          <div class="quote-block__headline">Contact Us</div>
+          <div class="quote-block__button">
+            <svg class="last" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+              <path fill="#2A292D" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
+            </svg>
+            <svg class="first" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+              <path fill="#2A292D" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
+            </svg>
+            <svg class="quote-block__mobile-arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+              <path fill="#274ecc" fill-rule="evenodd" d="M10,15 L16,15 L16,17 L10,17 L10,15 Z M16,10 L23,16 L16,22 L16,10 Z" transform="translate(-10 -10)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="quote-block__seperator"></div>
+        <div class="quote-block__copyright">Copyright &copy; <span id="theYear">2017</span> Hotel Technologies</div>
+      </div>
+
+
     </div>
+
 
     <script src="/static/js/main.js"></script>
   </body>
