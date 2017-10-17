@@ -868,8 +868,7 @@ body {
         outline: 0; }
   .inquiry-form .input-wrap__label {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
     height: 52px;
     max-width: 120px;
     width: 100%;
@@ -882,6 +881,10 @@ body {
     color: #2a292d;
     background-color: #e4e4e7;
     text-transform: uppercase; }
+    .inquiry-form .input-wrap__label span {
+      position: absolute;
+      left: 20px;
+      top: 20px; }
     .inquiry-form .input-wrap__label--error {
       color: #ff7474;
       background-color: rgba(255, 116, 116, 0.2); }

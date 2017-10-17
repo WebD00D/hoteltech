@@ -1241,8 +1241,9 @@ body {
 
     &__label {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      position: relative;
+      //justify-content: center;
+      //align-items: center;
       height: 52px;
       max-width: 120px;
       width: 100%;
@@ -1256,6 +1257,12 @@ body {
       color: #2a292d;
       background-color: #e4e4e7;
       text-transform: uppercase;
+
+      span {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+      }
 
       &--error {
         color: #ff7474;
