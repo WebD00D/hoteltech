@@ -194,6 +194,10 @@ body {
   margin-left: auto;
   margin-right: auto;
 
+  @media (max-width: 980px) {
+    padding-top: 86px;
+  }
+
   &--large {
     max-width: 980px;
   }
@@ -202,9 +206,7 @@ body {
     padding-top: 0px;
   }
 
-  @media (max-width: 980px) {
-    padding-top: 86px;
-  }
+
 }
 
 .page-header {
@@ -270,10 +272,17 @@ body {
   text-align: left;
   color: #7e7f82;
 
+  @media (max-width: 980px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   b {
     color: $black;
     font-weight: 500;
   }
+
+
 }
 
 .pagination-title {
@@ -1532,22 +1541,56 @@ body {
 
 .advertisements {
 
-  padding: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background-color: $black;
+
+  @media ( max-width: 980px ) {
+    padding-top: 40px;
+    padding-bottom: 16px;
+  }
+
+  a {
+    &:active, &:focus {
+      outline: none;
+    }
+  }
 
   &__gallery {
 
+    @media ( max-width: 980px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 478px;
+    }
+
+    @media ( max-width: 475px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 280px;
+    }
+
+    &__mobile-row {
+      display: flex;
+      margin-bottom: 20px;
+    }
 
     &__row {
       display: flex;
       align-items: center;
       margin-bottom: 20px;
+
+      @media (max-width: 980px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
     }
 
     &__closeBtn {
       display: flex;
-    justify-content: center;
-    align-items: center;
+      justify-content: center;
+      align-items: center;
       top: 90% !important;
       width: 100px !important;
       left: calc(50% - 50px;);
@@ -1676,6 +1719,12 @@ body {
     margin-left: 14px;
     margin-right: 14px;
 
+    @media ( max-width: 475px) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
     &--m-l-0 {
       margin-left: 0px;
     }
@@ -1684,11 +1733,92 @@ body {
       margin-right: 0px;
     }
 
+    @media (max-width: 980px) {
+      &--m-l-0-m {
+        margin-left: 0px;
+      }
+
+      &--m-r-0-m {
+        margin-right: 0px;
+      }
+    }
+
     img {
       height: 187px;
       width: 140px;
+
+      @media ( max-width: 475px) {
+        height: 107px;
+        width: 80px;
+      }
+
     }
 
   }
+
+}
+
+
+// Slick Settings
+
+.slick-dots {
+  padding-left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+
+  li {
+    display: flex;
+    justify-content: center;
+    height: 8px;
+    width: 8px;
+    border-radius: 50px;
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.slick-active {
+      background-color: #FFFFFF;
+    }
+
+  }
+
+  button {
+
+    height: 8px;
+    width: 8px;
+
+
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+
+    &:focus, &:active {
+      outline: none;
+    }
+  }
+
+  .slick-active button {
+    height: 8px;
+    width: 8px;
+
+    color: transparent;
+    //background-color: white;
+    border: none;
+    border-radius: 50%;
+  }
+
 
 }

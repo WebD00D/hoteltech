@@ -7,6 +7,7 @@
       <link href="static/css/style.css" type="text/css" rel="stylesheet" />
       <link href="static/css/simpleLightbox.css" type="text/css" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"/>
     </head>
     <body>
 
@@ -159,26 +160,29 @@
 
           <div class="advertisements__gallery__row">
 
-            <a  href="/static/img/ads/ad_1.jpg">
-              <div class="advertisements__advertisement ">
-                <img src="/static/img/ads/ad_1.jpg" />
-              </div>
-            </a>
+          <div class="advertisements__gallery__mobile-row">
+              <a  href="/static/img/ads/ad_1.jpg">
+                <div class="advertisements__advertisement advertisements__advertisement--m-l-0 ">
+                  <img src="/static/img/ads/ad_1.jpg" />
+                </div>
+              </a>
 
-            <a  href="/static/img/ads/ad_2.jpg">
-              <div class="advertisements__advertisement">
-                <img src="/static/img/ads/ad_2.jpg" />
-              </div>
-            </a>
+              <a  href="/static/img/ads/ad_2.jpg">
+                <div class="advertisements__advertisement">
+                  <img src="/static/img/ads/ad_2.jpg" />
+                </div>
+              </a>
 
-            <a  href="/static/img/ads/ad_3.jpg">
-              <div class="advertisements__advertisement">
-                <img src="/static/img/ads/ad_3.jpg" />
-              </div>
-            </a>
+              <a  href="/static/img/ads/ad_3.jpg">
+                <div class="advertisements__advertisement">
+                  <img src="/static/img/ads/ad_3.jpg" />
+                </div>
+              </a>
+          </div>
 
+          <div class="advertisements__gallery__mobile-row">
             <a  href="/static/img/ads/ad_4.jpg">
-              <div class="advertisements__advertisement">
+              <div class="advertisements__advertisement advertisements__advertisement--m-l-0-m">
                 <img src="/static/img/ads/ad_4.jpg" />
               </div>
             </a>
@@ -194,13 +198,15 @@
                 <img src="/static/img/ads/ad_6.jpg" />
               </div>
             </a>
+          </div>
 
           </div> <!-- end gallery row 1 -->
 
           <div class="advertisements__gallery__row">
 
+          <div class="advertisements__gallery__mobile-row">
             <a  href="/static/img/ads/ad_7.jpg">
-              <div class="advertisements__advertisement ">
+              <div class="advertisements__advertisement advertisements__advertisement--m-l-0 ">
                 <img src="/static/img/ads/ad_7.jpg" />
               </div>
             </a>
@@ -216,9 +222,11 @@
                 <img src="/static/img/ads/ad_9.jpg" />
               </div>
             </a>
+          </div>
 
+          <div class="advertisements__gallery__mobile-row">
             <a  href="/static/img/ads/ad_10.jpg">
-              <div class="advertisements__advertisement">
+              <div class="advertisements__advertisement advertisements__advertisement--m-l-0">
                 <img src="/static/img/ads/ad_10.jpg" />
               </div>
             </a>
@@ -228,6 +236,7 @@
                 <img src="/static/img/ads/ad_11.jpg" />
               </div>
             </a>
+          </div>
 
 
           </div> <!-- end gallery row 2 -->
@@ -268,57 +277,78 @@
       crossorigin="anonymous"></script>
     <script src="/static/js/main.js"></script>
     <script src="/static/js/simpleLightbox.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
+$(document).ready(function() {
 
-      $(document).ready(function(){
+  initSlick()
 
+  function initSlick() {
 
-        $.SimpleLightbox.defaults = {
+    if ( $(".advertisements__gallery").hasClass("slick-initialized") ) {
+        $(".advertisements__gallery").slick('destroy');
+    }
 
-          // add custom classes to lightbox elements
-          elementClass: '',
-          elementLoadingClass: 'slbLoading',
-          htmlClass: 'slbActive',
-          closeBtnClass: 'advertisements__gallery__closeBtn',
-          nextBtnClass: ' advertisements__gallery__nextBtn',
-          prevBtnClass: ' advertisements__gallery__previousBtn',
-          loadingTextClass: '',
+    if ( window.innerWidth <= 980 ) {
+        $(".advertisements__gallery").slick({
+          arrows: false,
+          dots: true,
+        });
 
-          // customize / localize controls captions
-          closeBtnCaption: 'Close',
-          nextBtnCaption: '',
-          prevBtnCaption: 'Previous',
-          loadingCaption: 'Loading...',
+        $(".slick-dots button").text("")
+    } else {
+        if ( $(".advertisements__gallery").hasClass("slick-initialized") ) {
+          $(".advertisements__gallery").slick('unslick');
+        }
+    }
 
-          bindToItems: true, // set click event handler to trigger lightbox on provided $items
-          closeOnOverlayClick: true,
-          closeOnEscapeKey: true,
-          nextOnImageClick: true,
-          showCaptions: true,
+  }
 
-          captionAttribute: 'title', // choose data source for library to glean image caption from
-          urlAttribute: 'href', // where to expect large image
-
-          startAt: 0, // start gallery at custom index
-          loadingTimeout: 100, // time after loading element will appear
-
-          appendTarget: 'body', // append elsewhere if needed
-
-          beforeSetContent: null, // convenient hooks for extending library behavoiur
-          beforeClose: null,
-          beforeDestroy: null,
-
-          videoRegex: new RegExp(/youtube.com|vimeo.com/) // regex which tests load url for iframe content
-
-      };
-
-      $('.advertisements__gallery a').simpleLightbox();
+  $(window).resize(function(){
+    initSlick();
+  })
 
 
+  $.SimpleLightbox.defaults = {
+    // add custom classes to lightbox elements
+    elementClass: "",
+    elementLoadingClass: "slbLoading",
+    htmlClass: "slbActive",
+    closeBtnClass: "advertisements__gallery__closeBtn",
+    nextBtnClass: " advertisements__gallery__nextBtn",
+    prevBtnClass: " advertisements__gallery__previousBtn",
+    loadingTextClass: "",
 
-      })
+    // customize / localize controls captions
+    closeBtnCaption: "Close",
+    nextBtnCaption: "",
+    prevBtnCaption: "Previous",
+    loadingCaption: "Loading...",
 
-    </script>
+    bindToItems: true, // set click event handler to trigger lightbox on provided $items
+    closeOnOverlayClick: true,
+    closeOnEscapeKey: true,
+    nextOnImageClick: true,
+    showCaptions: true,
+
+    captionAttribute: "title", // choose data source for library to glean image caption from
+    urlAttribute: "href", // where to expect large image
+
+    startAt: 0, // start gallery at custom index
+    loadingTimeout: 100, // time after loading element will appear
+
+    appendTarget: "body", // append elsewhere if needed
+
+    beforeSetContent: null, // convenient hooks for extending library behavoiur
+    beforeClose: null,
+    beforeDestroy: null,
+
+    videoRegex: new RegExp(/youtube.com|vimeo.com/) // regex which tests load url for iframe content
+  };
+
+  $(".advertisements__gallery a").simpleLightbox();
+});
+</script>
   </body>
 </html>
