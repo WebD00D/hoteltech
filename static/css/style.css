@@ -67,6 +67,9 @@ body {
     @media (max-width: 980px) {
       .navbar__contact-link {
         display: none; } }
+  .navbar__logo-link {
+    display: flex;
+    align-items: center; }
   .navbar__link {
     margin-left: 60px;
     font-family: "Montserrat", sans-serif;
