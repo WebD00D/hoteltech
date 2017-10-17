@@ -22,6 +22,7 @@ app.use("/static/scss",express.static(__dirname + "/static/scss"));
 app.use("/static/js",express.static(__dirname + "/static/js"));
 app.use("/static/img",express.static(__dirname + "/static/img"));
 app.use("/static/img/hotels",express.static(__dirname + "/static/img/hotels"));
+app.use("/static/img/ads",express.static(__dirname + "/static/img/ads"));
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');

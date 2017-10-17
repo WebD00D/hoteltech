@@ -59,6 +59,11 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function initializeMenu() {
+
+    if ( document.querySelectorAll("[data-icon=brand-hide]").length == 0 ) {
+      return;
+    }
+
     document
       .querySelectorAll("[data-icon=brand-hide]")[0]
       .classList.add("d-none");
