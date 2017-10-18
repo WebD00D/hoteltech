@@ -1771,7 +1771,180 @@ body {
 }
 
 
+.product-details {
+
+  &__hero {
+    padding-top: 120px;
+    padding-bottom: 100px;
+
+    background-color: #1f1e22;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    font-family: $primary_font;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.17;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  &__subtitle {
+    margin-bottom: 60px;
+    max-width: 392px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: $primary_font;
+    font-size: 16px;
+    line-height: 1.75;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  &__photos--primary {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 584px;
+      &:active, &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__photos--secondary-container {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @media (max-width: 980px) {
+      display: none;
+    }
+  }
+
+  &__photos--secondary {
+    max-width: 812px;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      height: 100px;
+      width: 140px;
+      max-width: 140px;
+
+      &:active, &:focus {
+        outline: none;
+      }
+    }
+
+    .slick-slide {
+      opacity: 0.15;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+
+  }
+
+  &__next {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -10%;
+    top: calc(50% - 16px);
+
+    background-color: transparent;
+    border: solid 2px rgba(255,255,255,0.3);
+    border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active, &:focus {
+      outline: none;
+    }
+
+    img {
+      height: 13px;
+      width: 13px;
+    }
+
+  }
+
+  &__previous {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -10%;
+    top: calc(50% - 16px);
+
+    background-color: transparent;
+    border: solid 2px rgba(255,255,255,0.3);
+    border-radius: 50%;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active, &:focus {
+      outline: none;
+    }
+
+    img {
+      height: 13px;
+      width: 13px;
+    }
+
+  }
+
+}
+
+
+
+
+
 // Slick Settings
+
+.slick-slide {
+
+  &:hover {
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+&:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+}
 
 .slick-dots {
   padding-left: 0px;

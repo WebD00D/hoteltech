@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hotel Technologies Concept</title>
+      <link href="static/css/style.css" type="text/css" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"/>
+    </head>
+    <body>
+
+      <style>
+
+      /* the slides */
+.slick-slide {
+    margin: 0 10px;
+}
+/* the parent */
+.slick-list {
+    margin: 0 -10px;
+}
+      </style>
+
+    <div class="navbar">
+      <div class="navbar__link-wrap">
+        <a id="js_mobile_menu" class="navbar__mobile-menu" href="#"><img src="/static/img/dots_mobileNav.svg" /></a>
+        <div class="navbar__phone-email">
+          <img src="/static/img/phone_mobileNav.svg" />
+          <div class="navbar__phone-email__separator"></div>
+          <img src="/static/img/email_mobileNav.svg" />
+        </div>
+        <a class="navbar__logo-link" href="/"><img class="logo" src="/static/img/logo.png" /></a>
+        <a class="navbar__link" href="/about">About</a>
+        <a class="navbar__link" href="/products">Products</a>
+      </div>
+      <a class="navbar__contact-link" href="/contact">Contact Us</a>
+    </div>
+
+    <div class="mobile_navigation">
+      <a href="#"><div class="mobile_navigation__link">About</div></a>
+      <a href="#"><div class="mobile_navigation__link">Products</div></a>
+      <a href="/contact"><div class="mobile_navigation__link">Contact Us</div></a>
+    </div>
+
+
+
+    <div class="product-details">
+
+
+      <div class="product-details__hero">
+
+        <div class="product-details__title">Hi20</div>
+        <div class="product-details__subtitle">
+          NEW!! Triple Charging Power Plug with 4-USB Charging Ports
+        </div>
+
+        <div class="product-details__photos--primary">
+
+          <img src="/static/img/hi20_hp.png" />
+          <img src="/static/img/T1305_hp.png" />
+          <img src="/static/img/hi20_hp.png" />
+          <img src="/static/img/T1305_hp.png" />
+          <img src="/static/img/hi20_hp.png" />
+          <img src="/static/img/T1305_hp.png" />
+
+        </div>
+
+        <div class="product-details__photos--secondary-container">
+          <div class="product-details__photos--secondary">
+            <img src="/static/img/hi20_hp.png" />
+            <img src="/static/img/T1305_hp.png" />
+            <img src="/static/img/hi20_hp.png" />
+            <img src="/static/img/T1305_hp.png" />
+            <img src="/static/img/hi20_hp.png" />
+            <img src="/static/img/T1305_hp.png" />
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="/static/js/main.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+
+      $(".product-details__photos--primary").slick({
+        arrows: false,
+        fade: true
+      });
+
+      $(".product-details__photos--secondary").slick({
+        arrows: true,
+        slidesToShow: 5,
+        centerMode: true,
+        prevArrow: '<button class="slick-prev product-details__previous"><img src="/static/img/arrow_white.svg" /></button>',
+        nextArrow: '<button class="slick-next product-details__next"><img src="/static/img/arrow_white.svg" /></button>'
+      });
+
+      $('.product-details__photos--secondary').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+
+        $(".product-details__photos--primary").slick('slickGoTo', nextSlide)
+
+      });
+
+      $('.product-details__photos--primary').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+
+        $(".product-details__photos--secondary").slick('slickGoTo', nextSlide)
+
+      });
+
+
+
+
+    </script>
+
+  </body>
+</html>
