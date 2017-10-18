@@ -1220,6 +1220,11 @@ body {
   padding-bottom: 100px;
   background-color: #1f1e22; }
 
+.product-details__content {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .product-details__title {
   margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
@@ -1322,6 +1327,73 @@ body {
   .product-details__previous img {
     height: 13px;
     width: 13px; }
+
+.product-details__model-header {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.product-details__model {
+  width: 308px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ececee;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: center;
+  color: #7e7f82; }
+
+.product-details__columns {
+  display: flex;
+  justify-content: space-between; }
+
+.product-details__column {
+  width: 476px;
+  padding-top: 20px;
+  border-top: 1px solid #dfdfe0; }
+  .product-details__column__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.67;
+    text-align: left;
+    color: #2a292d; }
+    .product-details__column__title--centered {
+      text-align: center;
+      margin-bottom: 20px; }
+  .product-details__column__description {
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    text-align: center;
+    color: #7e7f82; }
+
+.product-details__features-column ul {
+  margin-left: 0px;
+  padding-left: 17px;
+  border-bottom: 1px solid #dfdfe0;
+  padding-bottom: 30px; }
+
+.product-details__features-column li {
+  margin-bottom: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: left;
+  color: #2a292d; }
+  .product-details__features-column li span {
+    color: #7e7f82; }
+  .product-details__features-column li b {
+    display: block;
+    color: #2a292d;
+    font-weight: 400; }
 
 .slick-slide:hover {
   cursor: move;
