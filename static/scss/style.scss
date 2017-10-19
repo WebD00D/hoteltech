@@ -341,11 +341,33 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 
+    @media (max-width: 980px) {
+      padding-top: 40px;
+      height: 400px;
+    }
+
     .headline-wrapper {
       max-width: 800px;
       width: 100%;
       margin-left: auto;
       margin-right: auto;
+
+      @media (max-width: 980px) {
+        padding-left: 20px;
+      }
+
+      .button {
+        @media(max-width: 980px) {
+          max-width: 40px;
+          padding: 0px;
+          width: 40px;
+          height: 40px;
+          justify-content: center;
+          span {
+            display: none;
+          }
+        }
+      }
     }
 
     .headline {
@@ -356,6 +378,13 @@ body {
       text-align: left;
       color: $white;
       text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+      @media (max-width: 980px) {
+        margin-bottom: 20px;
+
+        font-size: 32px;
+        line-height: 1.25;
+      }
     }
 
   }
@@ -371,6 +400,15 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 
+    @media ( max-width: 980px ) {
+      height: auto;
+      margin: 0px;
+
+      justify-content: center;
+      background-color: #f6f6f6;
+      background-image: none;
+    }
+
     .content-wrap {
       max-width: 561px;
       width: 100%;
@@ -378,6 +416,12 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @media ( max-width: 980px ) {
+        padding: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
     }
 
     .headline {
@@ -391,6 +435,16 @@ body {
       text-align: center;
       color: $white;
       border-bottom: 1px solid $white;
+
+      @media ( max-width: 980px ) {
+        width: 100%;
+        color: #2a292d;
+        border-bottom: 1px solid #dfdfe0;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.33;
+      }
+
     }
 
     .copy {
@@ -400,6 +454,13 @@ body {
        line-height: 1.6;
        text-align: center;
        color: $white;
+
+       @media ( max-width: 980px) {
+          font-size: 14px;
+          line-height: 1.71;
+          text-align: center;
+          color: #2a292d;
+       }
     }
 
   }
@@ -410,6 +471,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 860px;
+
+    @media (max-width: 980px) {
+      padding: 20px;
+      padding-top: 40px;
+    }
 
     .content-wrap {
       max-width: 860px;
@@ -429,6 +495,15 @@ body {
       line-height: 1.17;
       text-align: center;
       color: #2a292d;
+
+      @media ( max-width: 980px ) {
+        width: 100%;
+        color: #2a292d;
+        border-bottom: 1px solid #dfdfe0;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1.33;
+      }
     }
 
     .feature-row {
@@ -442,6 +517,7 @@ body {
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
 
       &-icon {
         height: 112px;
@@ -921,6 +997,10 @@ body {
 
   background-color: $white;
 
+  &--b-top {
+    border-top: 1px solid $pale_grey;
+  }
+
   @media (max-width: 980px) {
     height: 320px;
     margin-top: 0px;
@@ -1361,9 +1441,18 @@ body {
 
 .feature-products {
 
+  @media (max-width: 980px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   &__row {
     display: flex;
     flex: 1;
+
+    @media (max-width: 980px) {
+      flex-direction: column-reverse;
+    }
 
   }
 
@@ -1377,6 +1466,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (max-width: 980px) {
+      width: 100%;
+    }
 
     &-title {
       position: absolute;
