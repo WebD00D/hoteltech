@@ -173,35 +173,49 @@
 
     <script>
 
-      $(".product-details__photos--primary").slick({
-        arrows: false,
-        fade: true
-      });
+  $(".product-details__photos--primary").slick({
+    arrows: false,
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 980,
+        settings: {
+          dots: true,
+          fade: false
+        }
+      }
+    ]
+  });
 
-      $(".product-details__photos--secondary").slick({
-        arrows: true,
-        slidesToShow: 5,
-        centerMode: true,
-        prevArrow: '<button class="slick-prev product-details__previous"><img src="/static/img/arrow_white.svg" /></button>',
-        nextArrow: '<button class="slick-next product-details__next"><img src="/static/img/arrow_white.svg" /></button>'
-      });
+$(".product-details__photos--secondary").slick({
+  arrows: true,
+  slidesToShow: 5,
+  infinite: true,
+  centerMode: true,
+  prevArrow:
+    '<button class="slick-prev product-details__previous"><img src="/static/img/arrow_white.svg" /></button>',
+  nextArrow:
+    '<button class="slick-next product-details__next"><img src="/static/img/arrow_white.svg" /></button>'
+});
 
-      $('.product-details__photos--secondary').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+$(".product-details__photos--secondary").on("beforeChange", function(
+  event,
+  slick,
+  currentSlide,
+  nextSlide
+) {
+  $(".product-details__photos--primary").slick("slickGoTo", nextSlide);
+});
 
-        $(".product-details__photos--primary").slick('slickGoTo', nextSlide)
-
-      });
-
-      $('.product-details__photos--primary').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-
-        $(".product-details__photos--secondary").slick('slickGoTo', nextSlide)
-
-      });
-
-
-
-
-    </script>
+$(".product-details__photos--primary").on("beforeChange", function(
+  event,
+  slick,
+  currentSlide,
+  nextSlide
+) {
+  $(".product-details__photos--secondary").slick("slickGoTo", nextSlide);
+});
+</script>
 
   </body>
 </html>

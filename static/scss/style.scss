@@ -1778,6 +1778,12 @@ body {
     padding-bottom: 100px;
 
     background-color: #1f1e22;
+
+    @media (max-width: 980px) {
+      // background-color: #FFFFFF;
+      padding-top: 100px;
+      padding-bottom: 0px;
+    }
   }
 
   &__content {
@@ -1788,6 +1794,8 @@ body {
 
   &__title {
     margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     font-family: $primary_font;
     font-size: 48px;
@@ -1804,11 +1812,16 @@ body {
     margin-left: auto;
     margin-right: auto;
 
+
     font-family: $primary_font;
     font-size: 16px;
     line-height: 1.75;
     text-align: center;
     color: #ffffff;
+
+    @media (max-width: 980px) {
+      margin-bottom: 24px;
+    }
   }
 
   &__photos--primary {
@@ -1816,6 +1829,21 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
+
+    @media (max-width: 980px) {
+      margin-bottom: 0px;
+    }
+
+    .slick-dots {
+      top: -20px;
+      position: relative;
+    }
+
+    .slick-list {
+      @media (max-width: 980px) {
+        bottom: -24px;
+      }
+    }
 
     img {
       width: 100%;
@@ -1935,7 +1963,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 980px) {
+     padding-top: 5px;
+     padding-bottom: 20px;
+    }
+
   }
+
 
   &__model {
     width: 308px;
@@ -1957,12 +1992,28 @@ body {
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 980px) {
+      align-items: center;
+      flex-direction: column;
+    }
+
   }
 
   &__column {
     width: 476px;
     padding-top: 20px;
     border-top: 1px solid #dfdfe0;
+
+    @media (max-width: 980px) {
+      max-width: 476px;
+      width: 100%;
+
+      &:nth-child(2) {
+        border-top: none;
+        padding-top: 0px;
+      }
+
+    }
 
     &__title {
       font-family: $primary_font;
@@ -1972,20 +2023,37 @@ body {
       text-align: left;
       color: #2a292d;
 
+      @media (max-width: 980px) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
       &--centered {
           text-align: center;
           margin-bottom: 20px;
+
+          @media (max-width: 980px) {
+            margin-bottom: 0px;
+            text-align: left;
+
+          }
       }
     }
 
     &__description {
       margin-bottom: 20px;
-      
+      padding-left: 20px;
+      padding-right: 20px;
+
       font-family: $primary_font;
       font-size: 16px;
       line-height: 1.75;
       text-align: center;
       color: #7e7f82;
+
+      @media (max-width: 980px) {
+        text-align: left;
+      }
     }
   }
 
@@ -1998,6 +2066,11 @@ body {
       padding-left: 17px;
       border-bottom: 1px solid #dfdfe0;
       padding-bottom: 30px;
+
+      @media (max-width: 980px) {
+        padding-left: 40px;
+        padding-right: 20px;
+      }
     }
 
     li {
