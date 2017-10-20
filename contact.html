@@ -151,7 +151,22 @@
 
 
 
-
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
     <script src="/static/js/main.js"></script>
+
+    <script>
+
+      $(".input-wrap").click(function(){
+
+        $(".input-wrap").removeClass("input-wrap--active");
+        $(this).addClass("input-wrap--active");
+
+      })
+
+    </script>
+
   </body>
 </html>

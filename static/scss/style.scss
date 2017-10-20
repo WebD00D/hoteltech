@@ -27,6 +27,10 @@ body {
 
 }
 
+.bg-grey {
+  background-color: #f6f6f6;
+}
+
 // Hotel Technologies CSS
 
 .navbar {
@@ -1393,6 +1397,12 @@ body {
     height: 52px;
     display: flex;
     margin-bottom: 8px;
+
+    &--active {
+      box-shadow: 0 0 4px 0 #dfdfe0;
+      border: solid 1px #dfdfe0;
+    }
+
 
     &--textarea {
       height: 168px;
