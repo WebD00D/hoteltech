@@ -51,7 +51,7 @@
       <div class="product-details__hero">
         <div class="product-details__title">Hi20</div>
         <div class="product-details__subtitle">
-          NEW!! Triple Charging Power Plug with 4-USB Charging Ports
+          Triple Charging Power Plug with 4-USB Charging Ports
         </div>
         <div class="product-details__photos--primary">
           <img src="/static/img/hi20_hp.png" />
@@ -142,6 +142,11 @@
                   <div class="input-wrap__input"><input type="text" /></div>
                 </div>
 
+                <div class="input-wrap">
+                  <div class="input-wrap__label"><span>Quantity</span></div>
+                  <div class="input-wrap__input"><input type="text" /></div>
+                </div>
+
                 <div class="input-wrap input-wrap--textarea">
                   <div class="input-wrap__label input-wrap__label--textarea"><span>Comments</span></div>
                   <div class="input-wrap__input input-wrap__input--textarea"><textarea></textarea></div>
@@ -185,67 +190,54 @@
 
     </div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-    <script src="/static/js/main.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="/static/js/main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <script>
+<script>
 
-
-
-      $(".input-wrap").click(function(){
-
-        $(".input-wrap").removeClass("input-wrap--active");
-        $(this).addClass("input-wrap--active");
-
-      })
+$(".slick-slide").click(function(){
+  alert($(this).attr("data-slick-index"));
+})
 
 
-  $(".product-details__photos--primary").slick({
-    arrows: false,
-    fade: true,
-    responsive: [
-      {
-        breakpoint: 980,
-        settings: {
-          dots: true,
-          fade: false
-        }
+$(".input-wrap").click(function() {
+  $(".input-wrap").removeClass("input-wrap--active");
+  $(this).addClass("input-wrap--active");
+});
+
+$(".product-details__photos--primary").slick({
+  arrows: false,
+  fade: true,
+  responsive: [
+    {
+      breakpoint: 980,
+      settings: {
+        dots: true,
+        fade: false
       }
-    ]
-  });
+    }
+  ]
+});
 
 $(".product-details__photos--secondary").slick({
   arrows: true,
   slidesToShow: 5,
+  focusOnSelect: true,
   infinite: true,
   centerMode: true,
+  asNavFor: '.product-details__photos--primary',
   prevArrow:
     '<button class="slick-prev product-details__previous"><img src="/static/img/arrow_white.svg" /></button>',
   nextArrow:
     '<button class="slick-next product-details__next"><img src="/static/img/arrow_white.svg" /></button>'
 });
 
-$(".product-details__photos--secondary").on("beforeChange", function(
-  event,
-  slick,
-  currentSlide,
-  nextSlide
-) {
-  $(".product-details__photos--primary").slick("slickGoTo", nextSlide);
-});
 
-$(".product-details__photos--primary").on("beforeChange", function(
-  event,
-  slick,
-  currentSlide,
-  nextSlide
-) {
-  $(".product-details__photos--secondary").slick("slickGoTo", nextSlide);
-});
+
 </script>
 
   </body>

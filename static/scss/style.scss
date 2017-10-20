@@ -1583,16 +1583,31 @@ body {
 
   }
 
+  &__block-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+
   &__block {
     min-height: 432px;
     height: auto;
     display: flex;
-    width: 60%;
+    width: 100%;
     position: relative;
 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: .2s ease;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
 
     @media (max-width: 980px) {
       width: 100%;
@@ -1611,6 +1626,7 @@ body {
       line-height: 1.22;
       text-align: left;
       color: #ffffff;
+      z-index: 2;
 
       @media (max-width: 980px) {
          font-size: 24px;
@@ -1661,6 +1677,11 @@ body {
         color: #ffffff;
         text-transform: uppercase;
         text-decoration: none;
+        transition: .2s ease;
+
+        &:hover {
+          opacity: 0.75;
+        }
 
         img {
           margin-left: 10px;
@@ -1685,6 +1706,11 @@ body {
       display: flex;
       align-items: center;
       background-color: #1f1e22;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1);
+      }
 
       @media (max-width: 980px) {
         height: auto !important;
@@ -1864,6 +1890,8 @@ body {
   padding-bottom: 80px;
   background-color: $black;
 
+
+
   @media ( max-width: 980px ) {
     padding-top: 40px;
     padding-bottom: 16px;
@@ -2037,6 +2065,11 @@ body {
 
     margin-left: 14px;
     margin-right: 14px;
+    transition: .2s ease;
+
+    &:hover {
+      opacity: 0.15;
+    }
 
     @media ( max-width: 475px) {
       margin-left: 10px;
@@ -2191,11 +2224,23 @@ body {
 
     .slick-slide {
       opacity: 0.15;
+      transition: .2s ease;
+
+      &:hover {
+        cursor: pointer !important;
+        opacity: 1;
+      }
+
+      &:active {
+        cursor: pointer !important;
+      }
     }
 
     .slick-current {
       opacity: 1;
     }
+
+
 
   }
 
