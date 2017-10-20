@@ -962,7 +962,9 @@ body {
   width: 100%;
   height: 52px;
   display: flex;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  border: solid 1px #FFFFFF;
+  transition: .2s ease; }
   .inquiry-form .input-wrap--active {
     box-shadow: 0 0 4px 0 #dfdfe0;
     border: solid 1px #dfdfe0; }
@@ -1426,7 +1428,8 @@ body {
 .product-details__content {
   max-width: 980px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-bottom: 40px; }
 
 .product-details__title {
   margin-bottom: 20px;

@@ -1397,6 +1397,9 @@ body {
     height: 52px;
     display: flex;
     margin-bottom: 8px;
+    //box-shadow: 0 0 4px 0 #dfdfe0;
+    border: solid 1px #FFFFFF;
+    transition: .2s ease;
 
     &--active {
       box-shadow: 0 0 4px 0 #dfdfe0;
@@ -2094,6 +2097,7 @@ body {
     max-width: 980px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 40px;
   }
 
   &__title {
