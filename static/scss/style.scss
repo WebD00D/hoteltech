@@ -339,10 +339,15 @@ body {
 .homepage {
   padding-top: 60px;
 
+  &-topsection {
+    position: fixed;
+    width: 100%;
+  }
+
   .hero-wrapper {
 
     position: relative;
-    // display: flex;
+    //display: flex;
     // justify-content: center;
 
     .slick-dots {
@@ -436,10 +441,23 @@ body {
 
   }
 
+  .homepage-body {
+    padding-top: 1px;
+    position: relative;
+    top: 660px;
+
+    background-color: white;
+    z-index: 2;
+
+    @media (max-width: 980px) {
+      padding-top: 0px;
+      top: 440px;
+    }
+  }
+
   .info-brick {
     margin: 20px;
     height: 508px;
-    top: -10px;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -516,7 +534,7 @@ body {
   }
 
   .features {
-    padding-top: 120px;
+    padding-top: 90px;
     padding-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -560,14 +578,13 @@ body {
       display: flex;
       margin-bottom: 60px;
 
+      &:active, &:focus {
+        outline: none;
+      }
+
       @media ( max-width: 980px ) {
         flex-direction: column;
         margin-bottom: 0px;
-
-        &:active, &:focus {
-          outline: none;
-        }
-
       }
     }
 
