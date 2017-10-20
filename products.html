@@ -73,7 +73,9 @@
               <div class="products__filter__header" data-menu="category">
                 <img data-for="category" data-icon="category-show" class="products__filter__icon" src="/static/img/plus.svg" />
                 <img data-for="category" data-icon="category-hide" class="products__filter__icon d-none" src="/static/img/minus.svg" />
-                Category</div>
+                Category
+                <span class="products__filter__icon--clear">Clear <img src="/static/img/closeXBlue.svg" /></span>
+              </div>
               <div class="products__filter__options" data-option="category">
                 <div class="products__filter__option">
                   <input type="checkbox" id="check01" name="radio" />
@@ -210,6 +212,26 @@
       <div class="quote-block__copyright">Copyright &copy; <span id="theYear">2017</span> Hotel Technologies</div>
     </div>
 
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
     <script src="/static/js/main.js"></script>
+
+    <script>
+
+      $(document).ready(function(){
+
+        $(".products__filter__icon--clear").click(function(){
+
+          $("input[type='checkbox']").prop("checked", false)
+
+
+        })
+
+      })
+
+    </script>
+
   </body>
 </html>

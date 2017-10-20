@@ -486,7 +486,9 @@ body {
     .products__filter__header {
       height: 44px;
       padding-left: 20px;
+      padding-right: 20px;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #dfdfe0;
       font-family: "Montserrat", sans-serif;
@@ -500,7 +502,8 @@ body {
       @media (max-width: 980px) {
         .products__filter__header {
           height: 51px;
-          color: #274ecc; }
+          color: #274ecc;
+          justify-content: flex-start; }
           .products__filter__header:hover {
             cursor: pointer; } }
     .products__filter__mobile-header {
@@ -524,6 +527,17 @@ body {
         cursor: pointer; }
     .products__filter__icon {
       margin-right: 12px; }
+      .products__filter__icon--clear {
+        display: flex;
+        align-items: center;
+        color: #274ecc; }
+        .products__filter__icon--clear img {
+          margin-left: 3px; }
+        .products__filter__icon--clear:hover {
+          cursor: pointer; }
+        @media (max-width: 980px) {
+          .products__filter__icon--clear {
+            display: none; } }
     .products__filter__mobile-close {
       height: 36px;
       display: flex;

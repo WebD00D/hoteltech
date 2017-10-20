@@ -707,7 +707,9 @@ body {
     &__header {
        height: 44px;
        padding-left: 20px;
+       padding-right: 20px;
        display: flex;
+       justify-content: space-between;
        align-items: center;
 
        border-bottom: 1px solid $pale_grey;
@@ -723,6 +725,7 @@ body {
        @media (max-width: 980px) {
          height: 51px;
          color: $blue;
+         justify-content: flex-start;
 
          &:hover {
            cursor: pointer;
@@ -757,6 +760,26 @@ body {
 
     &__icon {
       margin-right: 12px;
+
+      &--clear {
+
+        display: flex;
+        align-items: center;
+
+        color: #274ecc;
+
+        img {
+          margin-left: 3px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        @media (max-width: 980px) {
+          display: none;
+        }
+      }
     }
 
     &__mobile-close {
