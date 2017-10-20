@@ -1434,9 +1434,11 @@ body {
         letter-spacing: 1.5px;
         text-align: left;
         color: #2a292d;
+        transition: .2s ease;
 
         &:hover {
           cursor: pointer;
+          border: 2px solid $black;
         }
 
         &:focus, &:active {

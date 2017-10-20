@@ -991,9 +991,11 @@ body {
       line-height: 2.4;
       letter-spacing: 1.5px;
       text-align: left;
-      color: #2a292d; }
+      color: #2a292d;
+      transition: .2s ease; }
       .inquiry-form .input-wrap__submit button:hover {
-        cursor: pointer; }
+        cursor: pointer;
+        border: 2px solid #2a292d; }
       .inquiry-form .input-wrap__submit button:focus, .inquiry-form .input-wrap__submit button:active {
         outline: 0; }
   .inquiry-form .input-wrap__label {
