@@ -339,18 +339,25 @@ body {
 .homepage {
   padding-top: 60px;
 
-  .hero {
-    height: 660px;
-    padding-top: 118px;
+  .hero-wrapper {
 
-    background-image:url('/static/img/hero.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    position: relative;
+    // display: flex;
+    // justify-content: center;
 
-    @media (max-width: 980px) {
-      padding-top: 40px;
-      height: 400px;
+    .slick-dots {
+      margin: 0;
+      position: relative;
+      top: -30px;
+    }
+
+    .headline-margins {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0px;
     }
 
     .headline-wrapper {
@@ -358,9 +365,12 @@ body {
       width: 100%;
       margin-left: auto;
       margin-right: auto;
+      position: absolute;
+      top: 118px;
 
       @media (max-width: 980px) {
-        padding-left: 20px;
+        top: 40px;
+        padding-left: 40px;
       }
 
       .button {
@@ -396,9 +406,41 @@ body {
 
   }
 
+  .hero-carousel {
+
+    .slick-slide {
+
+      &:focus, &:active {
+        outline: none;
+      }
+
+    }
+
+  }
+
+  .hero {
+    height: 660px;
+    //padding-top: 118px;
+
+    background-image:url('/static/img/hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (max-width: 980px) {
+      padding-top: 40px;
+      height: 400px;
+    }
+
+
+
+  }
+
   .info-brick {
     margin: 20px;
     height: 508px;
+    top: -10px;
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -415,6 +457,7 @@ body {
       background-color: #f6f6f6;
       background-image: none;
     }
+
 
     .content-wrap {
       max-width: 561px;

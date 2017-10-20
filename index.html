@@ -26,21 +26,36 @@
     </div>
 
     <div class="mobile_navigation">
-      <a href="#"><div class="mobile_navigation__link">About</div></a>
-      <a href="#"><div class="mobile_navigation__link">Products</div></a>
+      <a href="/about"><div class="mobile_navigation__link">About</div></a>
+      <a href="/products"><div class="mobile_navigation__link">Products</div></a>
       <a href="/contact"><div class="mobile_navigation__link">Contact Us</div></a>
     </div>
 
     <div class="homepage">
 
-      <div class="hero">
-        <div class="headline-wrapper">
-          <div class="headline">The Science of <br /> Feeling at Home</div>
-          <a class="button" href="/products">
-            <span>Products</span> <img src="/static/img/arrow.svg" />
-          </a>
+      <div class="hero-wrapper">
+        <div class="hero-carousel">
+          <div class="hero"></div>
+          <div class="hero"></div>
+          <div class="hero"></div>
         </div>
+
+        <div class="headline-margins">
+          <div class="headline-wrapper">
+            <div class="headline">The Science of <br /> Feeling at Home</div>
+            <a class="button" href="/products">
+              <span>Products</span> <img src="/static/img/arrow.svg" />
+            </a>
+          </div>
+        </div>
+
+
       </div>
+
+
+
+
+
 
       <div class="info-brick">
         <div class="content-wrap">
@@ -335,6 +350,14 @@
         }
       ]
     });
+
+    $(".hero-carousel").slick({
+      arrows: false,
+      fade: false,
+      dots: true,
+    });
+
+
 
 
 
