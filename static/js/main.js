@@ -3,27 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
     "quote-block__button"
   )[0];
 
-  if (quoteBlockButton) {
-    quoteBlockButton.onmouseover = function() {
-      const firstArrow = document.getElementsByClassName("first")[0];
-      const lastArrow = document.getElementsByClassName("last")[0];
-
-      if (window.innerWidth >= 980) {
-        firstArrow.classList.add("first--active");
-        lastArrow.classList.add("last--hidden");
-      }
-    };
-
-    quoteBlockButton.onmouseout = function() {
-      const firstArrow = document.getElementsByClassName("first")[0];
-      const lastArrow = document.getElementsByClassName("last")[0];
-
-      if (window.innerWidth >= 980) {
-        firstArrow.classList.remove("first--active");
-        lastArrow.classList.remove("last--hidden");
-      }
-    };
-  }
+  $(".quote-block__headline-wrap").hover(function() {
+    $(".quote-block__button").toggleClass("quote-block__button--hovered");
+    if (window.innerWidth >= 980) {
+      $(".first").toggleClass("first--active");
+      $(".last").toggleClass("last--hidden");
+    }
+  });
 
   document.addEventListener("mousewheel", handleScroll);
   document.addEventListener("DOMMouseScroll", handleScroll);
